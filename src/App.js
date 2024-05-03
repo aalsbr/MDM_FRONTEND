@@ -75,7 +75,7 @@ function App() {
                             </Typography>
                         </Toolbar>
                         <List>
-                            {['Dashboard', 'Device Management', 'Policy Management', 'Device Tracking', 'Order List', 'Product Stock', 'Settings', 'Logout'].map((text, index) => (
+                            {['Dashboard', 'Device Management', 'Policy Management','Device Tracking','Settings'].map((text, index) => (
                                 <ListItem button key={text} component={NavLink} to={`/${text.toLowerCase().replace(/\s+/g, '-')}`}
                                     sx={{ '&.active': { backgroundColor: blue[500] } }}>
                                     <ListItemIcon>
@@ -83,11 +83,8 @@ function App() {
                                         {index === 0 && <DashboardIcon sx={{ color: 'white' }} />}
                                         {index === 1 && <DeviceHubIcon  sx={{ color: 'white' }}/>}
                                         {index === 2 && <PolicyIcon sx={{ color: 'white' }} />}
-                                        {index === 3 && <TrackChangesIcon  sx={{ color: 'white' }}/>}
-                                        {index === 4 && <ListAltIcon  sx={{ color: 'white' }}/>}
-                                        {index === 5 && <InventoryIcon  sx={{ color: 'white' }}/>}
-                                        {index === 6 && <SettingsIcon  sx={{ color: 'white' }}/>}
-                                        {index === 7 && <LogoutIcon  sx={{ color: 'white' }}/>}
+                                        {index === 3 && <InventoryIcon sx={{ color: 'white' }} />}
+                                        {index === 4 && <SettingsIcon sx={{ color: 'white' }} />}
                                         {/* ... other icons */}
                                     </ListItemIcon>
                                     <ListItemText primary={text} />
@@ -101,7 +98,6 @@ function App() {
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/device-management" element={<DeviceManagement />} />
                         <Route path="/policy-management" element={<PolicyManagement />} />
-                        <Route path="/device-tracking" element={<DeviceTracking />} />
                         <Route path="/order-list" element={<OrderList />} />
                         <Route path="/product-stock" element={<ProductStock />} />
                         <Route path="/settings" element={<Settings />} />

@@ -1,5 +1,4 @@
-
-const MockEnvironmentEnabled = true
+const MockEnvironmentEnabled = true;
 const DeviceManagementData = [
   {
     apiLevel: 34,
@@ -147,5 +146,67 @@ const DeviceManagementData = [
   },
 ];
 
+const PolicyManagementData = [
+  {
+    applications: [
+      {
+        installType: "FORCE_INSTALLED",
+        packageName: "com.google.samples.apps.iosched",
+      },
+    ],
+    name: "enterprises/LC03wlssib/policies/newPolicy6",
+    version: "1",
+  },
+  {
+    applications: [
+      {
+        installType: "FORCE_INSTALLED",
+        packageName: "com.google.samples.apps.iosched",
+      },
+    ],
+    name: "enterprises/LC03wlssib/policies/newPolicy8",
+    version: "1",
+  },
+  {
+    applications: [
+      {
+        installType: "FORCE_INSTALLED",
+        packageName: "com.google.samples.apps.iosched",
+      },
+    ],
+    name: "enterprises/LC03wlssib/policies/newPolicy9",
+    version: "1",
+  },
+  {
+    advancedSecurityOverrides: {
+      developerSettings: "DEVELOPER_SETTINGS_DISABLED",
+    },
+    applications: [
+      {
+        installType: "FORCE_INSTALLED",
+        packageName: "com.google.samples.apps.iosched",
+      },
+    ],
+    name: "enterprises/LC03wlssib/policies/policy1",
+    version: "1",
+  },
+  {
+    applications: [
+      {
+        installType: "FORCE_INSTALLED",
+        packageName: "com.whatsapp",
+      },
+      {
+        installType: "FORCE_INSTALLED",
+        packageName: "com.google.android.youtube",
+      },
+    ],
+    blockApplicationsEnabled: true,
+    name: "enterprises/LC03wlssib/policies/testingyoutube",
+    playStoreMode: "WHITELIST",
+    screenCaptureDisabled: true,
+    version: "1",
+  },
+];
 
-export { DeviceManagementData,MockEnvironmentEnabled}
+export { DeviceManagementData,PolicyManagementData, MockEnvironmentEnabled };
